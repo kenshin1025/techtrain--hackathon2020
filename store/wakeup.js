@@ -1,5 +1,5 @@
 export const state = () => ({
-  hour: 0,
+  hour: 7,
   minute: 0,
 })
 

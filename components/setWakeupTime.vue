@@ -2,7 +2,7 @@
   <v-dialog v-model="dialog" width="500">
     <template v-slot:activator="{ on }">
       <v-btn color="red lighten-2" dark v-on="on">
-        起きる時間を決める
+        起きる時間セット
       </v-btn>
     </template>
 
