@@ -18,6 +18,23 @@
         </v-card-actions>
       </v-card>
     </v-dialog>
+    <v-dialog v-model="failDialog" width="500">
+      <v-card>
+        <v-card-title class="headline">
+          早起き失敗…
+        </v-card-title>
+        <v-card-text>
+          残念…
+        </v-card-text>
+
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn color="primary" text @click="failDialog = false">
+            オッケー
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
   </div>
 </template>
 
@@ -26,7 +43,8 @@ export default {
   name: "okita",
   data() {
     return {
-      dialog: false
+      dialog: false,
+      failDialog: false
     };
   },
   methods: {
@@ -40,7 +58,7 @@ export default {
         this.$store.dispatch("size/okita");
         this.dialog = true;
       } else {
-        console.log("起きてない");
+        this.failDialog = true;
       }
     }
   }

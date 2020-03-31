@@ -3,6 +3,9 @@
     <v-flex xs12 sm8 md6>
       <v-row align="center" justify="center">
         <v-col cols="12">
+          <v-toolbar dense>
+            <v-toolbar-title>起床予定時刻　{{ this.$store.state.wakeup.time }}</v-toolbar-title>
+          </v-toolbar>
           <v-card max-width="100%" color="light-blue accent-4">
             <v-row align="center" justify="center">
               <pet></pet>
@@ -16,8 +19,8 @@
           </v-card>
         </v-col>
         <v-card max-width="100%">
-          <v-card-text>
-            毎日起きたい時間に起きてペットを育てよう！
+          <v-card-text class="headline">
+            毎日セットした時間の前後30分に起きてペットを育てよう！
           </v-card-text>
         </v-card>
       </v-row>
